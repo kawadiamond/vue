@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>My first Vue app</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+        <script src="https://unpkg.com/vue@3.0.0/dist/vue.global.js"></script>    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    </head>
+  <body>
+    <style>
+    .green {
+        font-size:32pt;
+        font-weight:plain;
+        color:green;
+   }
+   .blue {
+        font-size:24pt;
+        font-weight:bold;
+        color:blue;
+   }
+
+    </style>
+    <h1>Vue3</h1>
+
+    <div id="app">
+    <button v-on:click="onClick">マウスをクリック</button>
+    <p>{{now}}</p>
+    <input type="text" v-model="message"
+    </div>
+    <script>
+        const appdata ={
+        data(){
+            return{
+                message:
+            }
+        }
+
+
+        data:()=> ({
+            now:'-'
+      }),
+      methods:{
+         onClick:function(){
+            this.now=new Date().toLocaleString('ja-JP');
+         }
+      }
+    }
+      Vue.createApp(appdata).mount('#app')
+    </script>
+  </body>
+</html>
